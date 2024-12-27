@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loomic Corp</title>
+    <link rel="icon" href="og.png" type="image/png">
+    <!-- Add Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <style>
+    @font-face {
+            font-family: "myFont";
+            src: url("nigga.otf") format("opentype");
+        }
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #ab47bc;
+            --bg-color: #f3e5f5;
+            --text-color: #4a148c;
+            --card-bg: #fff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1e1e1e;
+            --text-color: #f5f5f5;
+            --card-bg: #2c2c2c;
+            --primary-color: #bb86fc;
+            --secondary-color: #3700b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 50;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+    --header-bg-color: white; /* Light mode header background */
+    --header-text-color: #4a148c; /* Light mode header text color */
+}
+
+[data-theme="dark"] {
+    --header-bg-color: #2c2c2c; /* Dark mode header background */
+    --header-text-color: #f5f5f5; /* Dark mode header text color */
+}
+
+header {
+    position: relative;
+    color: var(--header-text-color); /* Use variable for text color */
+    text-align: center;
+    padding: 150px;
+    border: 12px solid transparent; /* Initial transparent border */
+    border-radius: 10px; /* Rounded corners for style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    background: linear-gradient(145deg, var(--header-bg-color), rgba(255, 255, 255, 0.1)); /* Gradient effect */
+    animation: border-move 7s infinite linear;
+}
+@keyframes border-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+        header h1 {
+            background-size: 200%;
+            font-family: 'Montserrat', sans-serif;
+            animation: text-shadow 1.5s infinite alternate;
+            font-size: 3rem;
+            padding-left: 100px; /* Adjusted margin to accommodate logo size */
+            color: transparent;
+            background: linear-gradient(45deg, #037e59, #140599, #611c1c);
+            background-clip: text;
+            animation: 10s infinite ease-in-out;
+            -webkit-background-clip: text;
+            animation: shimmer 3s infinite, sparkle 1s infinite;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8), 
+                0 0 20px rgba(255, 255, 255, 0.6), 
+                0 0 30px rgba(255, 255, 255, 0.4), 
+                0 0 40px rgba(255, 255, 255, 0.2);
+        }
+        @keyframes text-shadow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+header p {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5, #42d392, #f5a623, #fc354c, #17ead9);
+    background-size: 300%; /* Larger background size for the animation */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+    animation: gradient-move 3s infinite linear; /* Apply animation */
+    margin-top: 10px;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+/* Keyframes for color transition */
+@keyframes color-change {
+    0% { background-color: indigo; }
+    20% { background-color: green; }
+    40% { background-color: blue; }
+    60% { background-color: purple; }
+    80% { background-color: grey; }
+    100% { background-color: khaki; }
+}
+
+        
+
+        @keyframes sparkle {
+            0% {
+                text-shadow: 
+                    0 0 5px rgba(255, 255, 255, 0.8),
+                    0 0 10px rgba(255, 255, 255, 0.6),
+                    0 0 15px rgba(255, 255, 255, 0.4),
+                    0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                text-shadow: 
+                    0 0 5px rgba(255, 255, 255, 1),
+                    0 0 10px rgba(255, 255, 255, 1),
+                    0 0 15px rgba(255, 255, 255, 0.8),
+                    0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 
+                    0 0 5px rgba(255, 255, 255, 0.8),
+                    0 0 10px rgba(255, 255, 255, 0.6),
+                    0 0 15px rgba(255, 255, 255, 0.4),
+                    0 0 20px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .logo {
+    position: absolute;
+    top: 20px; /* Adjust position to avoid overlapping with the header */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px; /* Adjusted size for better balance */
+    height: auto;
+    z-index: 10;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.logo:hover {
+    transform: translateX(-50%) scale(1.1); /* Hover scaling effect */
+}
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: none;
+            padding: 3px;
+            position: relative;
+            z-index: 100;
+        }
+        nav button {
+            background-color: indigo;
+            color: rgb(85, 145, 100);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s; 
+        }
+        nav button:hover {
+            background-color: darkgrey;
+        }
+
+        nav a {
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(165, 59, 179);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin: 40px 0; /* Increased margin to add space between sections */
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .skills .skill {
+            margin-bottom: 20px;
+        }
+
+        .skills .skill-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .skills .progress {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .skills .progress-bar {
+            height: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 25px; /* Center text vertically */
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--secondary-color);
+        }
+        .profile-pic {
+    width: 100px; /* Smaller size */
+    height: 100px; /* Maintain a perfect square */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fits inside the circle */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a nice effect */
+}
+/* Container for the grid */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+    justify-items: center; /* Centers items within the grid */
+    padding: 20px 0;
+}
+
+/* Individual member styling */
+.member {
+    text-align: center;
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Circular profile picture styling */
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+/* Text styling for name */
+.member h3 {
+    margin: 10px 0 5px;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Text styling for description */
+.member p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Hover effect */
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for responsiveness */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+/* Individual Service Box */
+.service-box {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: 250px; /* Ensure a cubic appearance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Service Icon */
+.service-box .service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Ensure the icon fits nicely */
+    border-radius: 15px;
+}
+
+/* Service Title */
+.service-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Service Description */
+.service-box p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Default styles for desktop */
+body {
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 20px;
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        margin: 10px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    header {
+        padding: 100px 20px; /* Adjust for smaller screens */
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        padding-left: 0; /* Remove padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        
+    }
+
+    .skills .progress-bar {
+        font-size: 0.8rem; /* Reduce font size for mobile */
+    }
+
+    .members-grid, .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for mobile */
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+    .header, .footer {
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .menu {
+        display: block; /* Show mobile menu */
+    }
+    .logo {
+    position: absolute;
+    top: 10px; /* Adjusted position to avoid overlapping with the header */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Make logo responsive */
+    max-width: 250px; /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+}
+
+
+.service-box {
+    width: 100%; /* Make service boxes full width */
+    height: auto; /* Allow height to adjust */
+ }
+
+
+#reviews {
+            padding: 50px 20px;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+
+        #reviews h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .review-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .review-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .review-card p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .review-card .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .review-card .author {
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .advice {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+         /* Custom font for the word "Loomic" */
+@font-face {
+    font-family: "myFont";
+    src: url("nigga.otf") format("otf");
+}
+
+.animated-loomic {
+    font-family: "myFont" , sans-serif; /* Custom font */
+    font-size: 0.9em; /* Adjust text size */
+    background: linear-gradient(90deg, #FF5733, #FFD700, #00FA9A, #1E90FF, #FF1493); /* Multi-colored gradient */
+    background-size: 300%; /* Larger background for smooth gradient animation */
+    background-clip: text; /* Clip gradient to text */
+    -webkit-background-clip: text; /* Webkit prefix for text clip */
+    color: transparent; /* Gradient visibility */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* Glow effect */
+    animation: bounce 2s infinite, gradient-shift 3s infinite; /* Combine bounce and gradient animation */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-50px); /* Adjust bounce height */
+    }
+}
+
+/* Gradient Animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <img src="loomic.png" alt="Loomic Logo" class="logo">
+    <header>
+        <h1>Welcome to <span class="animated-loomic">Loomic</span></h1>
+        <p>YOUR TRUSTED BRAND FOR QUALITY AND INNOVATION.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#members">Members</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Loomic</h2>
+            <p>Loomic is committed to delivering high-quality services that blend innovation and reliability for coding lovers. Our team works tirelessly to ensure customer satisfaction and continuous improvement for code durability and maintainanace.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <div class="skill-title">HTML & CSS</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">JavaScript</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Node.js</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Python</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">PHP</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Graphic Design</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 65%;">65%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">UI/UX Design</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Database Management</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="members">
+            <h2>Our Team</h2>
+            <p>Meet the passionate and talented team members behind Loomic.</p>
+            <div class="members-grid">
+                <div class="member">
+                    <img src="user.png" alt="John Doe" class="profile-pic">
+                    <h3>Tugane Brian</h3>
+                    <p>As the CEO, Brian ensures that Loomic stays at the forefront of innovation and quality, driving the team toward success.</p>
+                </div>
+                <div class="member">
+                    <img src="user.png" alt="Jane Smith" class="profile-pic">
+                    <h3>Abdul Jabal</h3>
+                    <p>Jabal, our CTO, leads the development team with cutting-edge technology and strategic thinking.</p>
+                </div>
+                <div class="member">
+                    <img src="user.png" alt="Michael Johnson" class="profile-pic">
+                    <h3>Nshuti Alain</h3>
+                    <p>Alain, our Lead Developer, crafts robust solutions and mentors the team in building scalable applications.</p>
+                </div>
+                <div class="member">
+                    <img src="user.png" alt="Emily Davis" class="profile-pic">
+                    <h3>Ngoga Sabin</h3>
+                    <p>Sabin heads our marketing efforts, ensuring our brand reaches and resonates with our audience globally.</p>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Discover our diverse range of tools and systems designed to enhance your development workflow.</p>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-box">
+                    <img src="gitihabu.png" alt="Version Control" class="service-icon">
+                    <h3>Version Control Systems</h3>
+                    <p>Manage your code history and collaborate effectively with tools like Git, GitHub, and Bitbucket.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-box">
+                    <img src="no2.png" alt="Code Review Tools" class="service-icon">
+                    <h3>Code Review Tools</h3>
+                    <p>Streamline code quality checks with platforms like GitHub Pull Requests and Phabricator.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-box">
+                    <img src="no3.png" alt="Communication Tools" class="service-icon">
+                    <h3>Communication Tools</h3>
+                    <p>Boost team collaboration with tools like Slack, Microsoft Teams, and Zoom.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-box">
+                    <img src="no4.png" alt="Project Management" class="service-icon">
+                    <h3>Project Management Tools</h3>
+                    <p>Organize and track progress with tools like Jira, Trello, and Asana.</p>
+                </div>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2>What Our Users Say</h2>
+            <div class="reviews-container">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <p>"Loomic truly redefined branding for us. The designs were exceptional, and the service was top-notch."</p>
+                    <div class="stars">★★★★</div>
+                    <div class="author">- Alex Johnson</div>
+                </div>
+    
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <p>"The team at Loomic is incredibly creative and professional. Highly recommend them for your business."</p>
+                    <div class="stars">★★★★</div>
+                    <div class="author">- Samantha Carter</div>
+                </div>
+    
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <p>"Amazing work! The branding strategies helped us connect better with our audience. Love it!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Brian Lewis</div>
+                </div>
+            </div>
+    
+            <div class="advice">
+                Looking to elevate your brand? Trust Loomic to bring your vision to life!
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Get in touch with us for more information about Loomic and what we offer.</p>
+            <p>Name: Loomic.Inc</p>
+            <p>Email: <a href="mailto:tuganeb@gmail.com">tuganeb@gmail.com</a></p>
+            <p>Phone: +250 789 5968 777</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Loomic. All rights reserved.</p>
+        <p>Created by Tugane Brian</p>
+    </footer>
+
+    <button class="theme-toggle" id="theme-toggle">Toggle Dark Mode</button>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            // Check if the current theme is dark
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                // Switch to light mode
+                document.body.removeAttribute('data-theme');
+            } else {
+                // Switch to dark mode
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
